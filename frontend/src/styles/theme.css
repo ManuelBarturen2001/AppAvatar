@@ -1,0 +1,98 @@
+:root {
+  /* Color */
+  --bg-base: #12141a;
+  --bg-surface: #1b1e27;
+  --bg-surface-hover: #232733;
+  --border-subtle: #2a2e38;
+  --border-strong: #3a3f4c;
+
+  --text-primary: #edeff3;
+  --text-secondary: #98a2b3;
+  --text-muted: #656d7c;
+
+  --accent-primary: #8fd14f;
+  --accent-primary-dim: #6ea83c;
+  --accent-secondary: #f2c94c;
+
+  --status-alive: #4ade80;
+  --status-dead: #f87171;
+  --status-unknown: #94a3b8;
+
+  --danger: #f87171;
+
+  /* Type */
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Layout */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 24px rgba(0, 0, 0, 0.24);
+
+  --max-width: 1180px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-base);
+  background-image: radial-gradient(circle at 15% 0%, rgba(143, 209, 79, 0.07), transparent 45%),
+    radial-gradient(circle at 85% 20%, rgba(242, 201, 76, 0.05), transparent 40%);
+  background-attachment: fixed;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  font-family: inherit;
+}
+
+/* Foco visible accesible, consistente en toda la app */
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: var(--accent-primary);
+  color: #0c0d10;
+}
+
+.mono-tag {
+  font-family: var(--font-mono);
+  letter-spacing: 0.03em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
